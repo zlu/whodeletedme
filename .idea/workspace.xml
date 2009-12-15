@@ -63,7 +63,7 @@
       <file leaf-file-name="index.fbml.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/friends/index.fbml.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="34" selection-start="163" selection-end="163" vertical-scroll-proportion="0.067226894">
+            <state line="1" column="5" selection-start="15" selection-end="15" vertical-scroll-proportion="0.016806724">
               <folding />
             </state>
           </provider>
@@ -860,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/friends_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20091215072710_create_friends.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
@@ -874,9 +867,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/friends_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/friends/index.fbml.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="34" selection-start="163" selection-end="163" vertical-scroll-proportion="0.067226894">
+        <state line="1" column="5" selection-start="15" selection-end="15" vertical-scroll-proportion="0.016806724">
           <folding />
         </state>
       </provider>
