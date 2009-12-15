@@ -10,5 +10,4 @@ class ApplicationController < ActionController::Base
 
   ensure_authenticated_to_facebook
 
-  p facebook_session
 end
