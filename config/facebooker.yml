@@ -9,17 +9,16 @@
 # This should only be necessary until the final version of the new profile is released.
 
 development:
-  api_key: 59c6a2bdb85f907e8914296d50b8d2e9
-  secret_key: d80753adc556b09573da7b125132456e
+  api_key: f17fe996672136c94fb0acc014848b35
+  secret_key: e9b0ec24a7f485bd3bd4fd5d0f4a4af8
   canvas_page_name: outoflove
-  callback_url: http://whodeletedme.heroku.com
-#  callback_url: http://web1.tunnlr.com:10143
+  callback_url: http://web1.tunnlr.com:10790
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
-    public_host_username: tunnlr538
+    public_host_username: tunnlr1228
     public_host: ssh1.tunnlr.com
-    public_port: 10143
+    public_port: 10790
     local_port: 3000
     server_alive_interval: 0
    

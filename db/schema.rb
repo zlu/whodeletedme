@@ -12,7 +12,7 @@
 ActiveRecord::Schema.define(:version => 20091215073340) do
 
   create_table "friends", :force => true do |t|
-    t.integer  "fb_id",      :limit => 20
+    t.string   "fb_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

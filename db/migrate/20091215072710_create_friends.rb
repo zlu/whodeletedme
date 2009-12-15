@@ -1,7 +1,7 @@
 class CreateFriends < ActiveRecord::Migration
   def self.up
     create_table :friends do |t|
-      t.integer :fb_id, :limit => 20
+      t.string :fb_id
       t.integer :user_id
       t.timestamps
     end

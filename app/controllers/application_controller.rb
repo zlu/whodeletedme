@@ -10,4 +10,18 @@ class ApplicationController < ActionController::Base
 
   ensure_authenticated_to_facebook
 
+  helper_attr :current_user
+  attr_accessor :current_user
+  before_filter :set_current_user
+
+  def set_current_user
+    puts "++++++++++++++in set_current_user++++++++++++++"
+    unless params["fb_sig_user"].nil?
+      self.current_user = User.find_or_create_by_fb_id(params["fb_sig_user"])
+      puts "++++++++++++++located user+++++++++++++++++++++" + current_user.fb_id.to_s
+    else
+      puts "+++++++++++++++could not locate user+++++++++++++++"
+    end
+  end
+
 end
