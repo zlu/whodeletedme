@@ -42,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="friends_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/friends_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.27830833">
+            <state line="17" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -54,16 +54,16 @@
       <file leaf-file-name="20091215072710_create_friends.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20091215072710_create_friends.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.fbml.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.fbml.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/friends/index.fbml.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="32" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.2631578">
+            <state line="4" column="34" selection-start="163" selection-end="163" vertical-scroll-proportion="0.067226894">
               <folding />
             </state>
           </provider>
@@ -133,9 +133,9 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/facebooker.yml" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/friends/index.fbml.erb" />
         <option value="$PROJECT_DIR$/app/controllers/friends_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20091215072710_create_friends.rb" />
+        <option value="$PROJECT_DIR$/app/views/friends/index.fbml.erb" />
       </list>
     </option>
   </component>
@@ -860,23 +860,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/friends/index.fbml.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/friends_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.2631578">
+        <state line="17" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20091215072710_create_friends.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/friends_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/friends/index.fbml.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.27830833">
+        <state line="4" column="34" selection-start="163" selection-end="163" vertical-scroll-proportion="0.067226894">
           <folding />
         </state>
       </provider>
