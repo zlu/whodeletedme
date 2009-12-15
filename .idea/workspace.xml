@@ -51,10 +51,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebooker.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="facebooker.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/facebooker.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.18008186">
+            <state line="11" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="34" selection-start="461" selection-end="461" vertical-scroll-proportion="0.16371077">
               <folding />
             </state>
           </provider>
@@ -96,15 +105,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebooker.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Library/Ruby/Gems/1.8/gems/facebooker-1.0.58/lib/facebooker.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
@@ -132,6 +132,7 @@
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/config/facebooker.yml" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -836,7 +837,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/facebooker.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.18008186">
+        <state line="11" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="34" selection-start="461" selection-end="461" vertical-scroll-proportion="0.16371077">
           <folding />
         </state>
       </provider>
