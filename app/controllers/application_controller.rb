@@ -10,5 +10,5 @@ class ApplicationController < ActionController::Base
 
   ensure_authenticated_to_facebook
 
-  head 200
+  
 end
