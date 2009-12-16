@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @user_ids = User.all.map(&:fb_id).sort
   end
 end
