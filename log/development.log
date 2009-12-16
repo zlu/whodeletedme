@@ -1597,3 +1597,324 @@ facebook.friends.get (1.70421600341797) uid = 617977441
   [4;36;1mFriend Load (18.4ms)[0m   [0;1mSELECT * FROM "friends" WHERE ("friends".user_id = 1) [0m
 Rendering friends/index
 Completed in 1775ms (View: 11, DB: 19) | 200 OK [http://web1.tunnlr.com/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFriends (20091215072710)
+Migrating to CreateUsers (20091215073340)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("friends")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "fb_id" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "fb_id" integer(20), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091215073340')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091215072710')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFriends (20091215072710)
+Migrating to CreateUsers (20091215073340)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("friends")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+Swapping facebooker config: 'f17fe996672136c94fb0acc014848b35'
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2009-12-15 20:44:53) [GET]
+  Parameters: {"fb_sig_app_id"=>"210944760839", "fb_sig_request_method"=>"GET", "fb_sig_locale"=>"en_US", "fb_sig_in_canvas"=>"1", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"4a5721b4d06145fcc537a78a7aeef18e", "fb_sig_friends"=>"4118,103632,202747,203135,220375,224794,1200354,1235538,1246208,1701849,1956141,2419843,3201471,4000509,4808683,4812974,10113759,28102234,77002730,500071393,500071397,500939937,501089969,503329585,505680548,507042858,509445503,509459613,509665304,511962989,513114676,513630951,521510877,526232445,527636483,528680524,530271983,532390814,533619715,539412808,539681527,539917237,542655671,544550903,544843014,548714612,552208034,554216586,555158688,555238721,556041286,556583716,563544895,579607967,580396626,583628791,585203877,587530981,589409416,590001213,593514623,598186627,599430154,600494540,603908528,604891484,605681395,607569971,609662935,612832482,613505329,627996597,628471720,632863578,636906599,640471887,641598477,642899362,646456166,646998658,648353611,650516592,651126713,652495415,656216478,656334364,661493505,665099788,665757462,666855674,668501566,668503648,669464470,672016035,673000882,673682572,673728564,681187584,681996390,682392518,683247393,690285211,691976164,694192548,695240785,696103528,696599713,699151417,699158382,699999521,701049244,701717530,701933407,704262268,704543022,707173178,707679399,714843214,716876124,718446554,718502304,718979338,719714459,721124297,722257779,723787994,725960875,727586735,730764744,731285984,731666549,735196711,736798108,742262989,748148557,752304752,752542353,752797966,752870066,754421787,762148374,767737994,770652776,772990230,776783760,784158908,795934675,809624688,815954125,817078265,825564280,833663753,870720499,880295053,894560326,1000233599,1016926774,1043084864,1065823547,1069381671,1070445825,1070923710,1099482190,1130134583,1145715351,1148202318,1168663172,1171866587,1180113843,1208343030,1211342470,1251919101,1255090021,1269081815,1271675704,1319600877,1321107041,1341214502,1346315380,1407894815,1439449463,1476786551,1486375573,1493227838,1496756740,1498174985,1502395480,1567262364,1592993052,1635186118,1655840790,1721392901,100000026866144,100000055928323,100000071899532,100000191795671,100000228057272", "fb_sig_added"=>"1", "fb_sig_expires"=>"1261026000", "fb_sig_session_key"=>"2.i1unULSXdW2mWl3N9UsJmA__.86400.1261026000-617977441", "fb_sig_ext_perms"=>"auto_publish_recent_activity", "fb_sig_api_key"=>"f17fe996672136c94fb0acc014848b35", "fb_sig_time"=>"1260938693.5041", "fb_sig_profile_update_time"=>"1241567522", "fb_sig_user"=>"617977441"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."fb_id" = '617977441') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "fb_id") VALUES('2009-12-16 04:44:53', '2009-12-16 04:44:53', 617977441)[0m
+facebook.friends.get (0.218968152999878) uid = 617977441
+  [4;36;1mFriend Load (0.2ms)[0m   [0;1mSELECT * FROM "friends" WHERE ("friends".user_id = 1) [0m
+  [4;35;1mFriend Create (0.4ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '4118')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '103632')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '202747')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '203135')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '220375')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '224794')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1200354')[0m
+  [4;36;1mFriend Create (0.4ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1235538')[0m
+  [4;35;1mFriend Create (0.4ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1246208')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1701849')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1956141')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '2419843')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '3201471')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '4000509')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '4808683')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '4812974')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '10113759')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '28102234')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '77002730')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '500071393')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '500071397')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '500939937')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '501089969')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '503329585')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '505680548')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '507042858')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '509445503')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '509459613')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '509665304')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '511962989')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '513114676')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '513630951')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '521510877')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '526232445')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '527636483')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '528680524')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '530271983')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '532390814')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '533619715')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '539412808')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '539681527')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '539917237')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '542655671')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '544550903')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '544843014')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '548714612')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '552208034')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '554216586')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '555158688')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '555238721')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '556041286')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '556583716')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '563544895')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '579607967')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '580396626')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '583628791')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '585203877')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '587530981')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '589409416')[0m
+  [4;36;1mFriend Create (0.4ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '590001213')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '593514623')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '598186627')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '599430154')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '600494540')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '603908528')[0m
+  [4;36;1mFriend Create (0.4ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '604891484')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '605681395')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '607569971')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '609662935')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '612832482')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '613505329')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '627996597')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '628471720')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '632863578')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '636906599')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '640471887')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '641598477')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '642899362')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '646456166')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '646998658')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '648353611')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '650516592')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '651126713')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '652495415')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '656216478')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '656334364')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '661493505')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '665099788')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '665757462')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '666855674')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '668501566')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '668503648')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '669464470')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '672016035')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '673000882')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '673682572')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '673728564')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '681187584')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '681996390')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '682392518')[0m
+  [4;35;1mFriend Create (0.4ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '683247393')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '690285211')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '691976164')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '694192548')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '695240785')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '696103528')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '696599713')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '699151417')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '699158382')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '699999521')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '701049244')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '701717530')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '701933407')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '704262268')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '704543022')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '707173178')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '707679399')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '714843214')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '716876124')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '718446554')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '718502304')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '718979338')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '719714459')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '721124297')[0m
+  [4;35;1mFriend Create (0.5ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '722257779')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '723787994')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '725960875')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '727586735')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '730764744')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '731285984')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '731666549')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '735196711')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '736798108')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '742262989')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '748148557')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '752304752')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '752542353')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '752797966')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '752870066')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '754421787')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '762148374')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '767737994')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '770652776')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '772990230')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '776783760')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '784158908')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '795934675')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '809624688')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '815954125')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '817078265')[0m
+  [4;35;1mFriend Create (0.4ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '825564280')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '833663753')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '870720499')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '880295053')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '894560326')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1000233599')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1016926774')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1043084864')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1065823547')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1069381671')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1070445825')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1070923710')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1099482190')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1130134583')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1145715351')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1148202318')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1168663172')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1171866587')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1180113843')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1208343030')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1211342470')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1251919101')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1255090021')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1269081815')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1271675704')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1319600877')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1321107041')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1341214502')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1346315380')[0m
+  [4;36;1mFriend Create (0.7ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1407894815')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1439449463')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1476786551')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1486375573')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1493227838')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1496756740')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1498174985')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1502395480')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1567262364')[0m
+  [4;35;1mFriend Create (0.3ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1592993052')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1635186118')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1655840790')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '1721392901')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '100000026866144')[0m
+  [4;36;1mFriend Create (0.3ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '100000055928323')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '100000071899532')[0m
+  [4;36;1mFriend Create (0.2ms)[0m   [0;1mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '100000191795671')[0m
+  [4;35;1mFriend Create (0.2ms)[0m   [0mINSERT INTO "friends" ("created_at", "updated_at", "user_id", "fb_id") VALUES('2009-12-16 04:44:54', '2009-12-16 04:44:54', 1, '100000228057272')[0m
+Rendering friends/index
+Completed in 1061ms (View: 5, DB: 50) | 200 OK [http://web1.tunnlr.com/]
+Swapping facebooker config: 'f17fe996672136c94fb0acc014848b35'
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-12-15 20:45:03) [GET]
+  Parameters: {"fb_sig_app_id"=>"210944760839", "fb_sig_request_method"=>"GET", "fb_sig_locale"=>"en_US", "fb_sig_in_canvas"=>"1", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"2e97181cde7c0767b8735064b509ba7a", "fb_sig_friends"=>"4118,103632,202747,203135,220375,224794,1200354,1235538,1246208,1701849,1956141,2419843,3201471,4000509,4808683,4812974,10113759,28102234,77002730,500071393,500071397,500939937,501089969,503329585,505680548,507042858,509445503,509459613,509665304,511962989,513114676,513630951,521510877,526232445,527636483,528680524,530271983,532390814,533619715,539412808,539681527,539917237,542655671,544550903,544843014,548714612,552208034,554216586,555158688,555238721,556041286,556583716,563544895,579607967,580396626,583628791,585203877,587530981,589409416,590001213,593514623,598186627,599430154,600494540,603908528,604891484,605681395,607569971,609662935,612832482,613505329,627996597,628471720,632863578,636906599,640471887,641598477,642899362,646456166,646998658,648353611,650516592,651126713,652495415,656216478,656334364,661493505,665099788,665757462,666855674,668501566,668503648,669464470,672016035,673000882,673682572,673728564,681187584,681996390,682392518,683247393,690285211,691976164,694192548,695240785,696103528,696599713,699151417,699158382,699999521,701049244,701717530,701933407,704262268,704543022,707173178,707679399,714843214,716876124,718446554,718502304,718979338,719714459,721124297,722257779,723787994,725960875,727586735,730764744,731285984,731666549,735196711,736798108,742262989,748148557,752304752,752542353,752797966,752870066,754421787,762148374,767737994,770652776,772990230,776783760,784158908,795934675,809624688,815954125,817078265,825564280,833663753,870720499,880295053,894560326,1000233599,1016926774,1043084864,1065823547,1069381671,1070445825,1070923710,1099482190,1130134583,1145715351,1148202318,1168663172,1171866587,1180113843,1208343030,1211342470,1251919101,1255090021,1269081815,1271675704,1319600877,1321107041,1341214502,1346315380,1407894815,1439449463,1476786551,1486375573,1493227838,1496756740,1498174985,1502395480,1567262364,1592993052,1635186118,1655840790,1721392901,100000026866144,100000055928323,100000071899532,100000191795671,100000228057272", "fb_sig_added"=>"1", "fb_sig_expires"=>"1261026000", "fb_sig_session_key"=>"2.i1unULSXdW2mWl3N9UsJmA__.86400.1261026000-617977441", "fb_sig_ext_perms"=>"auto_publish_recent_activity", "fb_sig_api_key"=>"f17fe996672136c94fb0acc014848b35", "fb_sig_time"=>"1260938703.0563", "fb_sig_profile_update_time"=>"1241567522", "fb_sig_user"=>"617977441"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."fb_id" = '617977441') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering users/index
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://web1.tunnlr.com/users]
+Swapping facebooker config: 'f17fe996672136c94fb0acc014848b35'
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-12-15 20:48:37) [GET]
+  Parameters: {"fb_sig_app_id"=>"210944760839", "fb_sig_request_method"=>"GET", "fb_sig_locale"=>"en_US", "fb_sig_in_canvas"=>"1", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"2819aae09aa8994b5e534a59c21d9176", "fb_sig_friends"=>"4118,103632,202747,203135,220375,224794,1200354,1235538,1246208,1701849,1956141,2419843,3201471,4000509,4808683,4812974,10113759,28102234,77002730,500071393,500071397,500939937,501089969,503329585,505680548,507042858,509445503,509459613,509665304,511962989,513114676,513630951,521510877,526232445,527636483,528680524,530271983,532390814,533619715,539412808,539681527,539917237,542655671,544550903,544843014,548714612,552208034,554216586,555158688,555238721,556041286,556583716,563544895,579607967,580396626,583628791,585203877,587530981,589409416,590001213,593514623,598186627,599430154,600494540,603908528,604891484,605681395,607569971,609662935,612832482,613505329,627996597,628471720,632863578,636906599,640471887,641598477,642899362,646456166,646998658,648353611,650516592,651126713,652495415,656216478,656334364,661493505,665099788,665757462,666855674,668501566,668503648,669464470,672016035,673000882,673682572,673728564,681187584,681996390,682392518,683247393,690285211,691976164,694192548,695240785,696103528,696599713,699151417,699158382,699999521,701049244,701717530,701933407,704262268,704543022,707173178,707679399,714843214,716876124,718446554,718502304,718979338,719714459,721124297,722257779,723787994,725960875,727586735,730764744,731285984,731666549,735196711,736798108,742262989,748148557,752304752,752542353,752797966,752870066,754421787,762148374,767737994,770652776,772990230,776783760,784158908,795934675,809624688,815954125,817078265,825564280,833663753,870720499,880295053,894560326,1000233599,1016926774,1043084864,1065823547,1069381671,1070445825,1070923710,1099482190,1130134583,1145715351,1148202318,1168663172,1171866587,1180113843,1208343030,1211342470,1251919101,1255090021,1269081815,1271675704,1319600877,1321107041,1341214502,1346315380,1407894815,1439449463,1476786551,1486375573,1493227838,1496756740,1498174985,1502395480,1567262364,1592993052,1635186118,1655840790,1721392901,100000026866144,100000055928323,100000071899532,100000191795671,100000228057272", "fb_sig_added"=>"1", "fb_sig_expires"=>"1261026000", "fb_sig_session_key"=>"2.i1unULSXdW2mWl3N9UsJmA__.86400.1261026000-617977441", "fb_sig_ext_perms"=>"auto_publish_recent_activity", "fb_sig_api_key"=>"f17fe996672136c94fb0acc014848b35", "fb_sig_time"=>"1260938916.8272", "fb_sig_profile_update_time"=>"1241567522", "fb_sig_user"=>"617977441"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."fb_id" = '617977441') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://web1.tunnlr.com/users]
+Swapping facebooker config: 'f17fe996672136c94fb0acc014848b35'
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2009-12-15 20:48:45) [GET]
+  Parameters: {"fb_sig_app_id"=>"210944760839", "fb_sig_request_method"=>"GET", "fb_sig_locale"=>"en_US", "fb_sig_in_canvas"=>"1", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"c5f742ac60026935549d3cad096ee455", "fb_sig_friends"=>"4118,103632,202747,203135,220375,224794,1200354,1235538,1246208,1701849,1956141,2419843,3201471,4000509,4808683,4812974,10113759,28102234,77002730,500071393,500071397,500939937,501089969,503329585,505680548,507042858,509445503,509459613,509665304,511962989,513114676,513630951,521510877,526232445,527636483,528680524,530271983,532390814,533619715,539412808,539681527,539917237,542655671,544550903,544843014,548714612,552208034,554216586,555158688,555238721,556041286,556583716,563544895,579607967,580396626,583628791,585203877,587530981,589409416,590001213,593514623,598186627,599430154,600494540,603908528,604891484,605681395,607569971,609662935,612832482,613505329,627996597,628471720,632863578,636906599,640471887,641598477,642899362,646456166,646998658,648353611,650516592,651126713,652495415,656216478,656334364,661493505,665099788,665757462,666855674,668501566,668503648,669464470,672016035,673000882,673682572,673728564,681187584,681996390,682392518,683247393,690285211,691976164,694192548,695240785,696103528,696599713,699151417,699158382,699999521,701049244,701717530,701933407,704262268,704543022,707173178,707679399,714843214,716876124,718446554,718502304,718979338,719714459,721124297,722257779,723787994,725960875,727586735,730764744,731285984,731666549,735196711,736798108,742262989,748148557,752304752,752542353,752797966,752870066,754421787,762148374,767737994,770652776,772990230,776783760,784158908,795934675,809624688,815954125,817078265,825564280,833663753,870720499,880295053,894560326,1000233599,1016926774,1043084864,1065823547,1069381671,1070445825,1070923710,1099482190,1130134583,1145715351,1148202318,1168663172,1171866587,1180113843,1208343030,1211342470,1251919101,1255090021,1269081815,1271675704,1319600877,1321107041,1341214502,1346315380,1407894815,1439449463,1476786551,1486375573,1493227838,1496756740,1498174985,1502395480,1567262364,1592993052,1635186118,1655840790,1721392901,100000026866144,100000055928323,100000071899532,100000191795671,100000228057272", "fb_sig_added"=>"1", "fb_sig_expires"=>"1261026000", "fb_sig_session_key"=>"2.i1unULSXdW2mWl3N9UsJmA__.86400.1261026000-617977441", "fb_sig_ext_perms"=>"auto_publish_recent_activity", "fb_sig_api_key"=>"f17fe996672136c94fb0acc014848b35", "fb_sig_time"=>"1260938924.9112", "fb_sig_profile_update_time"=>"1241567522", "fb_sig_user"=>"617977441"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."fb_id" = '617977441') LIMIT 1[0m
+facebook.friends.get (0.181625843048096) uid = 617977441
+  [4;35;1mFriend Load (8.7ms)[0m   [0mSELECT * FROM "friends" WHERE ("friends".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering friends/index
+Completed in 284ms (View: 1, DB: 9) | 200 OK [http://web1.tunnlr.com/]
+Swapping facebooker config: 'f17fe996672136c94fb0acc014848b35'
+
+
+Processing FriendsController#index (for 127.0.0.1 at 2009-12-15 20:49:10) [GET]
+  Parameters: {"fb_sig_app_id"=>"210944760839", "fb_sig_request_method"=>"GET", "fb_sig_locale"=>"en_US", "fb_sig_in_canvas"=>"1", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"e785a4208cc87f32526a954983c14db2", "fb_sig_friends"=>"4118,103632,202747,203135,220375,224794,1200354,1235538,1246208,1701849,1956141,2419843,3201471,4000509,4808683,4812974,10113759,28102234,77002730,500071393,500071397,500939937,501089969,503329585,505680548,507042858,509445503,509459613,509665304,511962989,513114676,513630951,521510877,526232445,527636483,528680524,530271983,532390814,533619715,539412808,539681527,539917237,542655671,544550903,544843014,548714612,552208034,554216586,555158688,555238721,556041286,556583716,563544895,579607967,580396626,583628791,585203877,587530981,589409416,590001213,593514623,598186627,599430154,600494540,603908528,604891484,605681395,607569971,609662935,612832482,613505329,627996597,628471720,632863578,636906599,640471887,641598477,642899362,646456166,646998658,648353611,650516592,651126713,652495415,656216478,656334364,661493505,665099788,665757462,666855674,668501566,668503648,669464470,672016035,673000882,673682572,673728564,681187584,681996390,682392518,683247393,690285211,691976164,694192548,695240785,696103528,696599713,699151417,699158382,699999521,701049244,701717530,701933407,704262268,704543022,707173178,707679399,714843214,716876124,718446554,718502304,718979338,719714459,721124297,722257779,723787994,725960875,727586735,730764744,731285984,731666549,735196711,736798108,742262989,748148557,752304752,752542353,752797966,752870066,754421787,762148374,767737994,770652776,772990230,776783760,784158908,795934675,809624688,815954125,817078265,825564280,833663753,870720499,880295053,894560326,1000233599,1016926774,1043084864,1065823547,1069381671,1070445825,1070923710,1099482190,1130134583,1145715351,1148202318,1168663172,1171866587,1180113843,1208343030,1211342470,1251919101,1255090021,1269081815,1271675704,1319600877,1321107041,1341214502,1346315380,1407894815,1439449463,1476786551,1486375573,1493227838,1496756740,1498174985,1502395480,1567262364,1592993052,1635186118,1655840790,1721392901,100000026866144,100000055928323,100000071899532,100000191795671,100000228057272", "fb_sig_added"=>"1", "fb_sig_expires"=>"1261026000", "fb_sig_session_key"=>"2.i1unULSXdW2mWl3N9UsJmA__.86400.1261026000-617977441", "fb_sig_ext_perms"=>"auto_publish_recent_activity", "fb_sig_api_key"=>"f17fe996672136c94fb0acc014848b35", "fb_sig_time"=>"1260938950.4181", "fb_sig_profile_update_time"=>"1241567522", "fb_sig_user"=>"617977441"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."fb_id" = '617977441') LIMIT 1[0m
+facebook.friends.get (0.19022011756897) uid = 617977441
+  [4;35;1mFriend Load (7.8ms)[0m   [0mSELECT * FROM "friends" WHERE ("friends".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering friends/index
+Completed in 220ms (View: 4, DB: 8) | 200 OK [http://web1.tunnlr.com/]
+Swapping facebooker config: 'f17fe996672136c94fb0acc014848b35'
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-12-15 20:49:14) [GET]
+  Parameters: {"fb_sig_app_id"=>"210944760839", "fb_sig_request_method"=>"GET", "fb_sig_locale"=>"en_US", "fb_sig_in_canvas"=>"1", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"50aeb61a13105e699c5af5e6b5bac6b2", "fb_sig_friends"=>"4118,103632,202747,203135,220375,224794,1200354,1235538,1246208,1701849,1956141,2419843,3201471,4000509,4808683,4812974,10113759,28102234,77002730,500071393,500071397,500939937,501089969,503329585,505680548,507042858,509445503,509459613,509665304,511962989,513114676,513630951,521510877,526232445,527636483,528680524,530271983,532390814,533619715,539412808,539681527,539917237,542655671,544550903,544843014,548714612,552208034,554216586,555158688,555238721,556041286,556583716,563544895,579607967,580396626,583628791,585203877,587530981,589409416,590001213,593514623,598186627,599430154,600494540,603908528,604891484,605681395,607569971,609662935,612832482,613505329,627996597,628471720,632863578,636906599,640471887,641598477,642899362,646456166,646998658,648353611,650516592,651126713,652495415,656216478,656334364,661493505,665099788,665757462,666855674,668501566,668503648,669464470,672016035,673000882,673682572,673728564,681187584,681996390,682392518,683247393,690285211,691976164,694192548,695240785,696103528,696599713,699151417,699158382,699999521,701049244,701717530,701933407,704262268,704543022,707173178,707679399,714843214,716876124,718446554,718502304,718979338,719714459,721124297,722257779,723787994,725960875,727586735,730764744,731285984,731666549,735196711,736798108,742262989,748148557,752304752,752542353,752797966,752870066,754421787,762148374,767737994,770652776,772990230,776783760,784158908,795934675,809624688,815954125,817078265,825564280,833663753,870720499,880295053,894560326,1000233599,1016926774,1043084864,1065823547,1069381671,1070445825,1070923710,1099482190,1130134583,1145715351,1148202318,1168663172,1171866587,1180113843,1208343030,1211342470,1251919101,1255090021,1269081815,1271675704,1319600877,1321107041,1341214502,1346315380,1407894815,1439449463,1476786551,1486375573,1493227838,1496756740,1498174985,1502395480,1567262364,1592993052,1635186118,1655840790,1721392901,100000026866144,100000055928323,100000071899532,100000191795671,100000228057272", "fb_sig_added"=>"1", "fb_sig_expires"=>"1261026000", "fb_sig_session_key"=>"2.i1unULSXdW2mWl3N9UsJmA__.86400.1261026000-617977441", "fb_sig_ext_perms"=>"auto_publish_recent_activity", "fb_sig_api_key"=>"f17fe996672136c94fb0acc014848b35", "fb_sig_time"=>"1260938954.4382", "fb_sig_profile_update_time"=>"1241567522", "fb_sig_user"=>"617977441"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."fb_id" = '617977441') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://web1.tunnlr.com/users]

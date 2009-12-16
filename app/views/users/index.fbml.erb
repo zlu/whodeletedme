@@ -1,0 +1,9 @@
+<%= "All users currently in our database." %><br /><br />
+
+<% unless @users.nil? || @users.empty? %>
+      <% for user in @users %>
+          <%= fb_profile_pic user.fb_id %>
+          <%= fb_name user.fb_id %>
+          <br/>
+      <% end %>
+<% end %>
