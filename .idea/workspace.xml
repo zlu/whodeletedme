@@ -4,6 +4,7 @@
     <list default="true" readonly="true" id="1dd9c3d3-28be-4711-9775-412e1b9466a2" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/application.fbml.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/friends/index.fbml.erb" afterPath="$PROJECT_DIR$/app/views/friends/index.fbml.erb" />
@@ -69,7 +70,7 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="78" selection-end="78" vertical-scroll-proportion="0.032742154">
+            <state line="2" column="23" selection-start="81" selection-end="81" vertical-scroll-proportion="0.032742154">
               <folding />
             </state>
           </provider>
@@ -747,7 +748,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="78" selection-end="78" vertical-scroll-proportion="0.032742154">
+        <state line="2" column="23" selection-start="81" selection-end="81" vertical-scroll-proportion="0.032742154">
           <folding />
         </state>
       </provider>
