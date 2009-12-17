@@ -1,0 +1,7 @@
+There are <%= @user_fb_ids.size %> users in our record: <br />
+
+<% for id in @user_fb_ids %>
+    <%= fb_profile_pic id %>
+    <%= fb_name id %>
+    <%= (id) %><br />
+<% end %>
