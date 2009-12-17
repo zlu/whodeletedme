@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
   map.resources :friends
   map.root :controller=>"friends", :action=>"index"
+  map.resources :users
   
   # See how all your routes lay out with "rake routes"
 
