@@ -9,6 +9,8 @@ class FriendsController < ApplicationController
     p "++++++++++++++++++++++local_friends_ids+++++++++++++++++"
     p local_friends_ids
     @missing_friends_ids = local_friends_ids - remote_friends_ids
+    p "++++++++++++++++++++++missing friends+++++++++++++++++++"
+    p @missing_friends_ids
     new_friends_ids = remote_friends_ids - local_friends_ids
     unless new_friends_ids.nil?
       p "++++++++++++++++++++new_friends_ids++++++++++++++++++"
