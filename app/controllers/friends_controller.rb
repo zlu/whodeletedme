@@ -2,6 +2,8 @@ class FriendsController < ApplicationController
   def index
     remote_friends_ids = facebook_session.user.friend_ids
     p "++++++++++++++++++++++remote_friends_ids+++++++++++++++++++"
+    p facebook_session.id
+    #fb_user= Facebooker::User.new(:id => 4118, :session => facebook_session)
     p remote_friends_ids
     local_friends_ids = current_user.friends.map(&:fb_id)
     p "++++++++++++++++++++++local_friends_ids+++++++++++++++++"

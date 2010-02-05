@@ -1,4 +1,6 @@
-<%= "Check back periodically to see if someone has unfriended you." %><br /><br />
+Check back periodically to see if someone has unfriended you.<br />
+Click <%= link_to "here", user_dumpees_path(current_user) %> to dump someone
+<br /><br />
   
 <% if @missing_friends_ids.nil? || @missing_friends_ids.empty? %>
  <%= "All your friends still love you" %>

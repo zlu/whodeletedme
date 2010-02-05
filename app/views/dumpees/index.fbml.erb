@@ -1,0 +1,6 @@
+You have dumped the follow people.  Click <%= link_to "here", new_user_dumpee_path(current_user) %> to dump more
+<br /><br />
+<% for dumpee in @dumpees%>
+  <!-- %= fb_profile_pic dumpee.friend_fb_id % -->
+  You dumped <%= fb_name dumpee.friend_fb_id %> <%= dumpee.reason.text %><br />
+<% end %>

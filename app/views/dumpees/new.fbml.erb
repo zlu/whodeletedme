@@ -1,0 +1,21 @@
+<% form_for(Dumpee.new, :url => user_dumpees_path, :html => { :onsubmit => "return publishthis();" }) do |f| %>
+    Who: <%= fb_friend_selector %><br /><br />
+    Why: <%= f.collection_select :reason_id, Reason.all, :id, :text %><br /><br />
+    <%= check_box_tag "publish" %> Publish to your wall <br />
+    <%= check_box_tag "notify" %> Notify the person you dumped <br /><br />
+    <%= submit_tag "Dump" %>
+<% end %>
+
+<script>
+  var user_message = null;
+  var attachment = null;
+  var action_links = null;
+  var target_id = null;
+  var user_message_prompt = null;
+  var callback = null;
+  var actor_id = null;
+  
+  function publishthis() {
+    Facebook.streamPublish();
+  }
+</script>

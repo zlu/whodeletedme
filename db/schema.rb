@@ -9,11 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091215073340) do
+ActiveRecord::Schema.define(:version => 20100112052701) do
+
+  create_table "dumpees", :force => true do |t|
+    t.integer  "friend_fb_id"
+    t.integer  "reason_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "friends", :force => true do |t|
     t.string   "fb_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reasons", :force => true do |t|
+    t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

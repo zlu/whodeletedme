@@ -1,3 +1,11 @@
-<fb:fbml>
+<fb:fbml version="1.1">
+  <head>
+    <%= javascript_include_tag "facebooker" %>
+  </head>
+
+  <%= fb_title "Welcome to Who Deleted Me" %>
+  <%= fb_dashboard %>
   <%= yield %>
 </fb:fbml>
+
+

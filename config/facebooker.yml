@@ -11,7 +11,7 @@
 development:
   api_key: f17fe996672136c94fb0acc014848b35
   secret_key: e9b0ec24a7f485bd3bd4fd5d0f4a4af8
-  canvas_page_name: outoflove
+  canvas_page_name: whodeletedmedev
   callback_url: http://web1.tunnlr.com:10790
   pretty_errors: true
   set_asset_host_to_callback_url: true
