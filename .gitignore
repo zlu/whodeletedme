@@ -2,4 +2,5 @@
 .idea/*
 log
 *~
+.*~
 db/*.sqlite3
