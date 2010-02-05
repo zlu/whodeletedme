@@ -1,4 +1,4 @@
-.idea
+.idea/
 log
 *~
 db/*.sqlite3
