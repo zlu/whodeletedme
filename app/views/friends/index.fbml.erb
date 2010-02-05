@@ -1,11 +1,11 @@
 Check back periodically to see if someone has unfriended you.<br />
 Click <%= link_to "here", user_dumpees_path(current_user) %> to dump someone
 <br /><br />
-  
+
 <% if @missing_friends_ids.nil? || @missing_friends_ids.empty? %>
- <%= "All your friends still love you" %>
+    <%= "All your friends still love you" %>
 <% else %>
- <%= "Suckers are below:" %><br />  
+    <%= "Suckers are below:" %><br />
 <% end %>
 
 <% for id in @missing_friends_ids%>

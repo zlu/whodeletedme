@@ -1,9 +1,7 @@
-All <%= @user_ids.size %> users currently in our database.<br /><br />
+There are <%= @user_fb_ids.size %> users in our record: <br />
 
-<% unless @user_ids.nil? || @user_ids.empty? %>
-      <% for fb_id in @user_ids %>
-          <%= fb_profile_pic fb_id %>
-          <%= fb_name fb_id %> (<%= fb_id %>)
-          <br/>
-      <% end %>
+<% for id in @user_fb_ids %>
+    <%= fb_profile_pic id %>
+    <%= fb_name id %>
+    <%= (id) %><br />
 <% end %>
