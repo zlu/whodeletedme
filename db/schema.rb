@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100330041335) do
+ActiveRecord::Schema.define(:version => 20100330060305) do
 
   create_table "dumpees", :force => true do |t|
     t.integer  "friend_fb_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20100330041335) do
     t.string   "fb_id",      :limit => 20
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "version",                  :default => 1
   end
 
 end
