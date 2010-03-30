@@ -1,7 +1,4 @@
-.idea/
+.idea
 log
 *~
 db/*.sqlite3
-.idea/*
-log/*
-.idea/workspace.xml
