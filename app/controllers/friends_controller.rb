@@ -37,5 +37,6 @@ class FriendsController < ApplicationController
       local_friend = Friend.find_by_fb_id(friend.uid.to_s)
       local_friend.update_attribute(:name, friend.name)
     end
+    current_user.update_attribute(:version, 2)
   end
 end
