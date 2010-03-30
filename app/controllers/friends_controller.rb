@@ -1,12 +1,12 @@
 class FriendsController < ApplicationController
   def index
     remote_friends_ids = facebook_session.user.friend_ids
-    p "++++++++++++++++++++++remote_friends_ids+++++++++++++++++++"
-    p facebook_session.id
-    p remote_friends_ids
+#    p "++++++++++++++++++++++remote_friends_ids+++++++++++++++++++"
+#    p facebook_session.id
+#    p remote_friends_ids
     local_friends_ids = current_user.friends.map(&:fb_id)
-    p "++++++++++++++++++++++local_friends_ids+++++++++++++++++"
-    p local_friends_ids
+#    p "++++++++++++++++++++++local_friends_ids+++++++++++++++++"
+#    p local_friends_ids
     populate_friends(local_friends_ids) if current_user.version == 1
     @missing_friends_ids = local_friends_ids - remote_friends_ids
     p "++++++++++++++++++++++missing friends+++++++++++++++++++"
