@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100330060305) do
+ActiveRecord::Schema.define(:version => 20100330065544) do
 
   create_table "dumpees", :force => true do |t|
     t.integer  "friend_fb_id"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(:version => 20100330060305) do
     t.datetime "updated_at"
     t.string   "name"
   end
+
+  add_index "friends", ["fb_id"], :name => "index_friends_on_fb_id"
+  add_index "friends", ["user_id"], :name => "index_friends_on_user_id"
 
   create_table "reasons", :force => true do |t|
     t.string   "text"
