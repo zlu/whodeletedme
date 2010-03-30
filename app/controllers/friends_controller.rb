@@ -7,7 +7,7 @@ class FriendsController < ApplicationController
     local_friends_ids = current_user.friends.map(&:fb_id)
     p "++++++++++++++++++++++local_friends_ids+++++++++++++++++"
     p local_friends_ids
-    populate_friends(local_friends_ids) if current_user.version == "1"
+    populate_friends(local_friends_ids) if current_user.version == 1
     @missing_friends_ids = local_friends_ids - remote_friends_ids
     p "++++++++++++++++++++++missing friends+++++++++++++++++++"
     p @missing_friends_ids
