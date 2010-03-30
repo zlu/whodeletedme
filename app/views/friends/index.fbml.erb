@@ -8,8 +8,9 @@ Check back periodically to see if someone has unfriended you.<br />
     <%= "Suckers are below:" %><br />
 <% end %>
 
-<% for id in @missing_friends_ids%>
-  <%= fb_profile_pic id %> 
-  <%= fb_name id %>
+<% for friend in @missing_friends %>
+  <%= fb_profile_pic friend.fb_id %>
+  <%= fb_name friend.fb_id %> 
+  (<%= friend.name %>)
   <br />
 <% end %>
