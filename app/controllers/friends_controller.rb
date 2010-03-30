@@ -23,8 +23,6 @@ class FriendsController < ApplicationController
       end
       current_user.friends.create(friend_array)
     end
-
-    populate_friends(remote_friends_ids)
   end
 
   private
