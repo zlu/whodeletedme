@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user_fb_ids = User.all.map(&:fb_id).sort
+    all_user_fb_ids = User.all.map(&:fb_id).sort
+    @user_fb_ids = all_user_fb_ids.paginate(:all, :page => params[:page], :per_page => 10)
   end
 end
