@@ -8,4 +8,4 @@ There are <%= @all_user_fb_ids.size %> users in our record: <br />
 
 <%= will_paginate @user_fb_ids,
                   :renderer => 'RemoteLinkRenderer',
-                  :remote => {:update => "Users"} %>
+                  :remote => {:update => "user_fb_ids"} %>
