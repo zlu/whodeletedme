@@ -6,7 +6,7 @@ There are <%= @all_user_fb_ids.size %> users in our record: <br />
     <%= (id) %><br />
 <% end %>
 
-<!-- %= will_paginate @user_fb_ids % -->
-<%= will_paginate @user_fb_ids,
+<%= will_paginate @user_fb_ids, :params => {:fb_sig_friends => nil} %>
+<!-- %= will_paginate @user_fb_ids,
                   :renderer => 'RemoteLinkRenderer',
-                  :remote => {:update => "user_fb_ids"} %>
+                   :remote => {:update => "user_fb_ids"} % -->
