@@ -12,5 +12,6 @@ Check back periodically to see if someone has unfriended you.<br />
   <%= fb_profile_pic friend.fb_id %>
   <%= fb_name friend.fb_id %> 
   (<%= friend.name %>)
+  <%= link_to "hide", friend_path(friend.id), :method => :delete, :confirm => "Are you sure you want to hide this sucker?" %>
   <br />
 <% end %>
