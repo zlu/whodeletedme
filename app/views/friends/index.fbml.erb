@@ -3,9 +3,9 @@ Check back periodically to see if someone has unfriended you.<br />
 <br /><br />
 
 <% if @missing_friends_ids.nil? || @missing_friends_ids.empty? %>
-    <%= "All your friends still love you" %>
+  All your friends still love you
 <% else %>
-    <%= "Suckers are below:" %><br />
+  Sucker(s): <%= @missing_friends_ids.size %> total, <%= @missing_friends.select{|mf| mf.visible}.size %> visible <br />
 <% end %>
 
 <% for friend in @missing_friends %>
