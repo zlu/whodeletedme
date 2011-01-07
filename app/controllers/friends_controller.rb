@@ -1,17 +1,14 @@
 class FriendsController < ApplicationController
   def index
     remote_friends_ids = facebook_session.user.friend_ids
-#    p "++++++++++++++++++++++remote_friends_ids+++++++++++++++++++"
-#    p facebook_session.id
-#    p remote_friends_ids
     local_friends_ids = current_user.friends.map(&:fb_id)
-#    p "++++++++++++++++++++++local_friends_ids+++++++++++++++++"
-#    p local_friends_ids
     populate_friends(local_friends_ids) if current_user.version == 1
     @missing_friends_ids = local_friends_ids - remote_friends_ids
     p "++++++++++++++++++++++missing friends+++++++++++++++++++"
     p @missing_friends_ids
     @missing_friends = current_user.friends.select{ |friend| friend.visible && @missing_friends_ids.include?(friend.fb_id)}
+    @missing_friends = @missing_friends.paginate({ :page => params[:page], :per_page => 10 })
+#    @missing_friends = @missing_friends.sort{|x, y| x.created_at > y.created_at}
     new_friends_ids = remote_friends_ids - local_friends_ids
     unless new_friends_ids.nil?
       p "++++++++++++++++++++new_friends_ids++++++++++++++++++"
