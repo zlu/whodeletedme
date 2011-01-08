@@ -11,6 +11,9 @@ Rails::Initializer.run do |config|
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
   config.action_controller.allow_forgery_protection = false
+
+  # Logger, required by heroku add-on
+  config.action_controller.logger = Logger.new(STDOUT)
   
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
